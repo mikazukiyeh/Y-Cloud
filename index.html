@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">同班同學圖鑑</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name" >姓名</label>
+        <input id="name" type="text" name="name" placeholder="Enter Your Name" required/>
+      </div>
+      <div>
+        <label id="email-label" for="email">信箱</label>
+        <input id="email" type="email" name="email" placeholder="Enter Your Email" required/>
+      </div>
+      <div>
+        <label id="number-label" for="number">年齡</label>
+        <input id="number" type="number" name="age" min="20" max="100" placeholder="Age" required/>
+      </div>
+      <div>
+        <label>職業</label>
+        <select id="dropdown">
+          <option name="job">學生</option>
+          <option name="job">公務員</option>
+          <option name="job">工</option>
+          <option name="job">商</option>
+          <option name="job">無職</option>
+        </select>
+      </div>
+      <hr>
+      <div>
+        <span>性別</span>
+        <label><input name="Gender" type="radio" value="male" />男</label>
+        <label><input name="Gender" type="radio" value="female" />女</label>
+        <label><input name="Gender" type="radio" value="not sure" />不確定</label>
+      </div>
+      <div>
+        <p>興趣</p>
+        <input type="checkbox" name="hobbies" value="reading">
+        <label>閱讀</label>
+        <input type="checkbox" name="hobbies" value="music">
+        <label>音樂</label>
+        <input type="checkbox" name="hobbies" value="sports">
+        <label>運動</label>
+      </div>
+      <div>
+        <p>有什麼想介紹自己的嗎?</p>
+        <textarea id="comment" type="input-textarea" name="comment" rows="3" cols="20" placeholder="現在想說什麼嗎?"></textarea>
+      </div>
+      <div>
+        <input type="checkbox" name="check" value="human" required/>
+        <label>我是人類</label>
+      </div>
+      <div>
+        <button type="submit" id="submit" class="submit button">提交</button>
+      </div>
+    </form>
+  </body>
+  </html>
