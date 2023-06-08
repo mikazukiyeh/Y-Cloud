@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  }
+
+body{
+  background-color:rgba(220,130,150,0.5);
+}
+
+h1,p{
+  text-align:center;
+}
+
+div{
+  border-radius:6px;
+
+}
