@@ -12,5 +12,5 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install -r requirement.txt
       - name: Run server
-          run: |
-            python3 server.py > log.txt 2>&1 &
+        run: |
+          python3 server.py > log.txt 2>&1 &
