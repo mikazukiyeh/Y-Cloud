@@ -2,7 +2,7 @@ name: practice
 on: push
 jobs:
   practice-job:
-    name: test_one
+    name: test one
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
