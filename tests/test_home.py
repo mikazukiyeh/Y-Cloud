@@ -1,4 +1,4 @@
+import requests
 def test_home():
-    a = 1
-    b = 1
-    assert a > b
+    r = requests.get("http://127.0.0.1:5001?a = 1& b = 2")
+    assert r.status_code == 200
