@@ -1,6 +1,6 @@
 name: practice
 on: push
-job:
+jobs:
   practice-job:
   name: test_one
   runs-on: ubuntu-latest
