@@ -15,11 +15,9 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v2
-        with:
-          python-version: latest  # 根據您的 Python 版本進行調整
 
       - name: Install dependencies
-        run: pip install selenium
+        run: pip3 install selenium
 
       - name: Run Selenium test
-        run: python login.py  # 根據您的檔案路徑進行調整
+        run: python3 login.py  # 根據您的檔案路徑進行調整
