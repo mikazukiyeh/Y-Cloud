@@ -23,4 +23,8 @@ jobs:
 
       - name: Run Selenium test
         run: |
+<<<<<<< HEAD
           python3 login.py > log.txt 2>&1   # 根據您的檔案路徑進行調整
+=======
+          python3 login.py > log.txt 2>&1  # 根據您的檔案路徑進行調整
+>>>>>>> 719cc34a794e099551cda2a1f4ed028d8bde5402
