@@ -16,13 +16,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
 
-      - name: Install dependencies
+      - name: Install ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | awk -F. '{print $1}')
+          CHROMEDRIVER_VERSION=$(curl -L "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}")
+          curl -L "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -o chromedriver.zip
+          unzip chromedriver.zip
+          chmod +x chromedriver
+          sudo mv chromedriver /usr/local/bin/
+          rm chromedriver.zip
+
+      - name: Install Selenium
         run: |
           python -m pip install --upgrade pip
-          pip3 install selenium
+          pip install selenium
 
       - name: Run Selenium test
         run: |
-          python3 login.py > log.txt 2>&1   # 根據您的檔案路徑進行調整
+          python login.py > log.txt 2>&1  # 根據您的檔案路徑進行調整
 
-
+      - name: Print log
+        run: cat log.txt
