@@ -23,4 +23,4 @@ jobs:
 
       - name: Run Selenium test
         run: |
-          python3 login.py > log.txt 2>&1 &  # 根據您的檔案路徑進行調整
+          python3 login.py > log.txt 2>&1   # 根據您的檔案路徑進行調整
