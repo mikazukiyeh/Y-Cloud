@@ -17,7 +17,10 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: Install dependencies
-        run: pip3 install selenium
+        run: |
+          python -m pip install --upgrade pip
+          pip3 install selenium
 
       - name: Run Selenium test
-        run: python3 login.py  # 根據您的檔案路徑進行調整
+        run: |
+          python3 login.py > log.txt 2>&1 &  # 根據您的檔案路徑進行調整
